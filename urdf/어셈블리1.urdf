@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.5.1-0-g916b5db  Build Version: 1.5.7152.31018
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="어셈블리1">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.0276418278157165 0.0312550060354525 0.472599056033966"
+        rpy="0 0 0" />
+      <mass
+        value="2.26299534521545" />
+      <inertia
+        ixx="0.0236090944163617"
+        ixy="3.29690604315019E-08"
+        ixz="-4.21076478593506E-19"
+        iyy="0.0424983502674055"
+        iyz="1.27406422046983E-05"
+        izz="0.0191899669560079" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://어셈블리1/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://어셈블리1/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="Front">
+    <inertial>
+      <origin
+        xyz="0.74891 0.028658 -0.0076879"
+        rpy="0 0 0" />
+      <mass
+        value="0.23852" />
+      <inertia
+        ixx="0.00016726"
+        ixy="3.6036E-08"
+        ixz="1.4132E-08"
+        iyy="0.00029897"
+        iyz="4.4926E-08"
+        izz="0.00016727" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://어셈블리1/meshes/Front.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://어셈블리1/meshes/Front.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="F"
+    type="continuous">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 -1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="Front" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      effort="0"
+      velocity="7" />
+  </joint>
+  <link
+    name="Left">
+    <inertial>
+      <origin
+        xyz="0.29689 0.29598 -0.0079574"
+        rpy="0 0 0" />
+      <mass
+        value="0.19333" />
+      <inertia
+        ixx="0.00013673"
+        ixy="2.7156E-08"
+        ixz="-1.4058E-08"
+        iyy="0.00025298"
+        iyz="-3.829E-08"
+        izz="0.00013674" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://어셈블리1/meshes/Left.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://어셈블리1/meshes/Left.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="L"
+    type="continuous">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 -1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="Left" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      effort="0"
+      velocity="7" />
+  </joint>
+  <link
+    name="Right">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://어셈블리1/meshes/Right.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://어셈블리1/meshes/Right.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="R"
+    type="continuous">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 -1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="Right" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      effort="0"
+      velocity="7" />
+  </joint>
+</robot>
